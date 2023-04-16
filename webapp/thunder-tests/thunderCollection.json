@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "0e0de641-4172-4fb6-8099-d6b7348618d8",
+    "colName": "shipment",
+    "created": "2022-11-26T13:20:56.741Z",
+    "sortNum": 10000,
+    "folders": []
+  },
+  {
+    "_id": "b1fc9ae2-2da2-4857-9fab-773aeda07ad1",
+    "colName": "port",
+    "created": "2022-11-26T13:21:03.403Z",
+    "sortNum": 20000,
+    "folders": []
+  }
+]

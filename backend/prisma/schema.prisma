@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL_LOCAL")
+}
+
+enum Role {
+  PARTY
+  INTERMEDIARY
+}
+
+model User {
+  id      Int     @id @default(autoincrement())
+  address String  @unique
+  name    String?
+  role    Role    @default(PARTY)
+}
+
+model Shipment {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  data  Json
+  nftId Int?
+
+  exporterAddress String
+  importerAddress String
+  nextInspector   String?
+  inspectors      String[]
+  isCancelled     Boolean  @default(false)
+}
+
+model Port {
+  id      Int     @id @default(autoincrement())
+  code    String
+  name    String
+  city    String?
+  country String?
+}

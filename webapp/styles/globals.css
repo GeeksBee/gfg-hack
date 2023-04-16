@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif !important ;
+  overflow-x: hidden;
+}
+
+.paraBody {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+input {
+  -webkit-user-select: text;
+}
+
+.w-webkit {
+  width: -webkit-fill-available;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  /* user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; */
+  /* user-select: none; */
+}
+
+.switch {
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.switch[data-ison="true"] {
+  justify-content: flex-end;
+}
+
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #ffcf51;
+}
+
+input:checked ~ .dotVoice {
+  transform: translateX(100%);
+  background-color: #73fff3;
+}
+
+::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #001db6;
+  border-radius: 10rem;
+}
+
+.slider {
+  --bar-bg: #5a5a5a;
+  --seek-before-width: 0;
+  -webkit-appearance: none;
+  position: relative;
+  background: var(--bar-bg);
+  height: 3px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 4px;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  margin-top: -3px;
+  border-radius: 50%;
+  background-color: rgb(71, 71, 71);
+  color: #808080;
+}
+.slider::before {
+  content: "";
+  height: 3px;
+  width: var(--seek-before-width);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+input,
+textarea {
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+}
+@media screen and (max-width: 480px) {
+  .show_list {
+    background-color: rgb(0, 0, 0);
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    left: 0%;
+  }
+  .show_list.close {
+    position: absolute;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+}
+.tem_table::-webkit-scrollbar,
+.head_table::-webkit-scrollbar,
+.sms_grp::-webkit-scrollbar,
+.sms_all::-webkit-scrollbar,
+.shedule::-webkit-scrollbar,
+.contactModal::-webkit-scrollbar,
+.ana_table::-webkit-scrollbar,
+.deliver_tab::-webkit-scrollbar,
+.draft_tab::-webkit-scrollbar,
+.Sus_tab::-webkit-scrollbar,
+.Run_tab::-webkit-scrollbar,
+.balance_Tab::-webkit-scrollbar,
+.camp_table::-webkit-scrollbar,
+.bar_chart::-webkit-scrollbar {
+  -ms-overflow-style: none;
+  display: none;
+}
+
+.ana_check input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  color: #001db6;
+}
+.ana_check .ana_list {
+  padding: 5px 10px;
+  color: #001db6;
+  margin-bottom: 10px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.ana_list:hover {
+  background-color: #eaf4ff;
+}
+.sms_wallet input[type="radio"] {
+  width: 18px;
+  height: 18px;
+}
+.wallet_radio input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+/* .customTooltip * {
+    color: #4a4a4a;
+    font-size: 18px;
+    
+  } */
+
+.newStyle .ant-modal-content,
+.newStyle .ant-modal-header {
+  border-radius: 20px;
+}
+.newStyle .ant-modal-oK {
+  background-color: #808080;
+}
+
+.customTooltip .introjs-tooltip-title {
+  color: #0a41c9;
+  width: 600px;
+}
+
+dot .tooltip {
+  background: #000;
+  width: 400px;
+  font-size: 112px;
+}
+
+/* tile uploaded pictures */
+.upload-list-inline .ant-upload-list-item {
+  float: left;
+  width: 200px;
+  margin-right: 8px;
+}
+
+.upload-list-inline [class*="-upload-list-rtl"] .ant-upload-list-item {
+  float: right;
+}
+
+@media screen and (max-width: 480px) {
+  .ana_check .ana_list {
+    font-size: 0.6rem;
+    padding: 5px;
+    font-weight: 500;
+  }
+  .Wall_uploadBtn {
+    width: 300px !important;
+  }
+  .bar_chart::-webkit-scrollbar,
+  .head_table::-webkit-scrollbar,
+  .contact_tab::-webkit-scrollbar {
+    -ms-overflow-style: none;
+    display: none;
+  }
+}

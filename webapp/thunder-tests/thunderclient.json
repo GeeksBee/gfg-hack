@@ -1,0 +1,49 @@
+[
+  {
+    "_id": "4fbd1177-bbd9-4b28-a9c2-8002bae47732",
+    "colId": "b1fc9ae2-2da2-4857-9fab-773aeda07ad1",
+    "containerId": "",
+    "name": "get ports",
+    "url": "{{host}}/api/port",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-11-26T13:21:13.951Z",
+    "modified": "2022-11-26T13:21:21.553Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8d2482ba-7b36-4d64-bf48-aca267fc5a76",
+    "colId": "0e0de641-4172-4fb6-8099-d6b7348618d8",
+    "containerId": "",
+    "name": "create shipment",
+    "url": "{{host}}/api/shipment/",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-11-26T18:07:07.306Z",
+    "modified": "2022-11-26T18:10:05.233Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"importerAddress\": \"\",\n  \"exporterAddress\": \"\",\n  \"origin\":\"\",\n  \"destination\": \"\",\n  \"nextInspector\": \"\",\n  \"ports\": [],\n  \"items\": []\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "cd7d14b9-fd78-46fc-bb36-48910b15c266",
+    "colId": "0e0de641-4172-4fb6-8099-d6b7348618d8",
+    "containerId": "",
+    "name": "create shipment Copy",
+    "url": "{{host}}/api/shipment/",
+    "method": "GET",
+    "sortNum": 20000,
+    "created": "2022-11-27T01:55:00.769Z",
+    "modified": "2022-11-27T01:55:13.549Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
