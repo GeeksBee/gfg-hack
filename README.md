@@ -20,7 +20,7 @@ EasyShip is built using the following technologies:
 - Tailwind CSS for styling
 - Node.js Express for the backend
 
-Getting Started
+## Getting Started
 
 To run EasyShip locally, follow these steps:
 
